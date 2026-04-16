@@ -3,6 +3,7 @@ import '../controller/log_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:logbook_app_001/features/onboarding/view/onboarding_view.dart';
 import 'package:intl/intl.dart';
+import 'package:logbook_app_001/features/vision/vision_view.dart';
 import '../../../services/access_control_service.dart';
 import 'log_editor_page.dart';
 
@@ -213,7 +214,17 @@ class _LogViewState extends State <LogView> {
                     ],
                   );
                 });
-            })
+            }),
+            IconButton(
+              icon: const Icon(Icons.camera_alt),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const VisionView()),
+                );
+              },
+              tooltip: 'Smart Patrol Vision',
+            ),
         ],
       ),
       body: ValueListenableBuilder<List<LogModel>>(

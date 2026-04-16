@@ -23,6 +23,7 @@ class CounterController {
 
   void updatestep(double newCounter, String userName) {
     int oldstep = _step;
+    if (newCounter < 0) return;
     _step = newCounter.round();
 
     if (oldstep != step) {

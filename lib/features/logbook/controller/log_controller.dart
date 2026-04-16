@@ -14,13 +14,14 @@ class LogController {
   
   final Box<LogModel> _myBox = Hive.box<LogModel>('offline_logs');
   final ValueNotifier<List<LogModel>> logsNotifier = ValueNotifier([]);
-  final MongoService _mongoService = MongoService();
+  final MongoService _mongoService;
 
   LogController({
     required this.userId,
     required this.userRole,
     required this.teamId,
-  });
+    MongoService? mongoService,
+  }) : _mongoService = mongoService ?? MongoService();
 
   Future<void> syncPendingLogs() async {
     final allLocalLogs = _myBox.values.toList();

@@ -9,7 +9,7 @@
 // import 'package:flutter_test/flutter_test.dart';
 // import 'package:logbook_app_001/features/logbook/view/counter_view.dart';
 
-// void main() {
+void main() {
 //   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
 //     // Build our app and trigger a frame.
 //     await tester.pumpWidget(const MaterialApp(home: CounterView()));
@@ -26,4 +26,4 @@
 //     expect(find.text('0'), findsNothing);
 //     expect(find.text('10'), findsOneWidget);
 //   });
-// }
+}
