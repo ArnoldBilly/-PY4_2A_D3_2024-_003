@@ -1,16 +1,35 @@
-# logbook_app_001
+Aplikasi mobile berbasis Flutter yang mengintegrasikan sistem pelaporan patroli dengan fitur **Pengolahan Citra Digital (DIP)** tingkat lanjut. Proyek ini dikembangkan untuk memenuhi standar praktikum PCD (Pengolahan Citra Digital) dengan mengimplementasikan teori dari merubah ke grayscale menjadi ke .
 
-A new Flutter project.
+## 🚀 Fitur Utama
 
-## Getting Started
+### 1. Akuisisi Citra & Interface
+* **Live Camera Stream**: Integrasi hardware kamera menggunakan `camera` package.
+* **Smart Capture**: Pengambilan gambar dengan manajemen lifecycle yang aman.
+* **Pro-Grade UX**: Toggle Flashlight, Toggle Overlay, dan loading state yang informatif.
 
-This project is a starting point for a Flutter application.
+### 2. Digital Image Processing (Sesuai Kurikulum PCD)
+Fitur pengolahan citra yang diimplementasikan meliputi:
 
-A few resources to get you started if this is your first Flutter project:
+| Kategori | Fitur | Deskripsi (Referensi PPT) |
+| :--- | :--- | :--- |
+| **Operasi Titik** | Brightness, Grayscale, Biner | Manipulasi nilai pixel individual dan Thresholding. |
+| **Aritmatika** | Penjumlahan & Pengurangan | Operasi $g(x,y) = f(x,y) \pm c$ dengan teknik *clamping*. |
+| **Logika** | AND, OR, XOR, MAX, MIN | Operasi bitwise dan perbandingan antara dua citra. |
+| **Histogram** | Equalization & Specification | Perbaikan kontras citra dan *Histogram Matching*. |
+| **Filter Spasial** | Mean, Median, Sharpen | Penghalusan citra (*smoothing*) dan penajaman tepi. |
+| **Frekuensi** | Fourier Transform | Visualisasi spektrum domain frekuensi. |
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🛠️ Prasyarat (Prerequisites)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Sebelum menjalankan proyek ini, pastikan Anda telah menginstal:
+* [Flutter SDK](https://docs.flutter.dev/get-started/install) (Versi terbaru disarankan).
+* [Dart SDK](https://dart.dev/get-started/sdk).
+* Android Studio / VS Code dengan plugin Flutter & Dart.
+* Perangkat Android/iOS fisik (untuk menguji fitur kamera).
+
+## 📥 Instalasi
+
+1. **Clone Repository**
+   ```bash
+   git clone [https://github.com/username/smart-patrol-vision.git](https://github.com/username/smart-patrol-vision.git)
+   cd smart-patrol-vision
